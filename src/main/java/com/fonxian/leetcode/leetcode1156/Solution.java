@@ -1,4 +1,4 @@
-package com.fonxian.leetcode1156;
+package com.fonxian.leetcode.leetcode1156;
 
 /**
  * 如果字符串中的所有字符都相同，那么这个字符串是单字符重复的字符串。

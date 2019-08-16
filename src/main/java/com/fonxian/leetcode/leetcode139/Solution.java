@@ -1,4 +1,4 @@
-package com.fonxian.leetcode139;
+package com.fonxian.leetcode.leetcode139;
 
 import java.util.ArrayList;
 import java.util.List;

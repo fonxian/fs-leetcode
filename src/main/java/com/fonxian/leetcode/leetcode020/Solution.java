@@ -1,4 +1,4 @@
-package com.fonxian.leetcode020;
+package com.fonxian.leetcode.leetcode020;
 
 import java.util.Stack;
 

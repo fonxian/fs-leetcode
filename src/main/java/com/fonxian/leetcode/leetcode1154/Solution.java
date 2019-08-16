@@ -1,4 +1,4 @@
-package com.fonxian.leetcode1154;
+package com.fonxian.leetcode.leetcode1154;
 
 /**
  * status: pass

@@ -1,4 +1,4 @@
-package com.fonxian.leetcode015;
+package com.fonxian.leetcode.leetcode015;
 
 import com.alibaba.fastjson.JSON;
 

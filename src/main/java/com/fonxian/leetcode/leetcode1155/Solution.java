@@ -1,4 +1,4 @@
-package com.fonxian.leetcode1155;
+package com.fonxian.leetcode.leetcode1155;
 
 /**
  * 这里有 d 个一样的骰子，每个骰子上都有 f 个面，分别标号为 1, 2, ..., f。
