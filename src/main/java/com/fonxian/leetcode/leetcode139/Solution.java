@@ -13,6 +13,8 @@ import java.util.List;
  * 第一步
  * dp[3] = dict.contain(s[0]+s[1]+s[2]+s[3])
  * s[i]为当前值
+ * flag1
+ * flag2
  * dp[1] = dict.contain(s[0]+s[1])
  * dp[2] = dict.contain(s[0]+s[1]+s[2])
  * dp[3] = dict.contain(s[0]+s[1]+s[2]+s[3]) = true
@@ -30,6 +32,19 @@ import java.util.List;
  * if(dp[n] == true){
  * index = n;
  * }
+ * <p>
+ * c a t s a n d o g
+ * 0 1 2 3 4 5 6 7 8
+ * F F T T F F T F F
+ * <p>
+ * 第一步
+ * s[0] = dict.contain(s[0]) = false
+ * s[1] = dict.contain(s[0,1]) = false
+ * s[2] = dict.contain(s[0,2]) = true
+ * s[3] = dict.contain(s[0,2] + s[3,3]) || dict.contain(s[3,3]) = true
+ * s[4] = dict.contain(s[0,3] + s[4,4]) || dict.contain(s[4,4]) = false
+ * s[5] = dict.contain(s[2,5]) || dict.contain(3,5) = false
+ * s[6] = dict.contain(s[2,6]) || dict.contain(3,6) = true
  *
  * @author Michael Fang
  * @since 2019-08-13
@@ -37,25 +52,22 @@ import java.util.List;
 public class Solution {
 
     public boolean wordBreak(String s, List<String> wordDict) {
-        char[] charArray = s.toCharArray();
-        int index = -1;
         int len = s.length();
         boolean[] dp = new boolean[len + 1];
-        for (int i = 0; i < len; i++) {
-            String tempStr = "";
-            for (int j = index + 1; j < len; j++) {
-                tempStr += charArray[j];
-                if (wordDict.contains(tempStr)) {
-                    index = j;
-                    dp[j] = true;
+        dp[0] = true;
+        for (int i = 1; i <= len; i++) {
+            if (wordDict.contains(s.substring(0, i))) {
+                dp[i] = true;
+                continue;
+            }
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordDict.contains(s.substring(j, i))) {
+                    dp[i] = true;
                     break;
-                } else {
-                    dp[j] = false;
                 }
             }
         }
-
-        return dp[len - 1];
+        return dp[len];
     }
 
     public static void main(String[] args) {
@@ -81,6 +93,19 @@ public class Solution {
         List<String> wordDict = new ArrayList<>();
         wordDict.add("aaaa");
         wordDict.add("aaa");
+//
+//        String s = "aaaaaa";
+//        List<String> wordDict = new ArrayList<>();
+//        wordDict.add("aaaa");
+//        wordDict.add("aaa");
+
+//        String s = "catsandog";
+//        List<String> wordDict = new ArrayList<>();
+//        wordDict.add("cats");
+//        wordDict.add("dog");
+//        wordDict.add("sand");
+//        wordDict.add("and");
+//        wordDict.add("cat");
 
         Solution solution = new Solution();
         System.out.println(solution.wordBreak(s, wordDict));

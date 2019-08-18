@@ -22,8 +22,6 @@ public class Solution {
             if (charArray[i] != currentChar) {
                 currentChar = charArray[i];
             }
-            
-
         }
         return 0;
     }
