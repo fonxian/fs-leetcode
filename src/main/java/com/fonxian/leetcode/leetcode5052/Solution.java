@@ -1,6 +1,7 @@
 package com.fonxian.leetcode.leetcode5052;
 
 import com.fonxian.leetcode.base.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -28,12 +29,12 @@ public class Solution {
             //遍历size次
             for (int i = 0; i < size; i++) {
                 temp = queue.poll();
-                result += temp.getVal();
-                if (temp.getLeft() != null) {
-                    queue.offer(temp.getLeft());
+                result += temp.val;
+                if (temp.left != null) {
+                    queue.offer(temp.left);
                 }
-                if (temp.getRight() != null) {
-                    queue.offer(temp.getRight());
+                if (temp.right != null) {
+                    queue.offer(temp.right);
                 }
             }
             if (result > sum) {
@@ -54,11 +55,11 @@ public class Solution {
         TreeNode node21 = new TreeNode(-89388);
         TreeNode node22 = new TreeNode(-32127);
 
-        node1.setLeft(node11);
-        node1.setRight(node12);
+        node1.left = node11;
+        node1.right = node12;
 
-        node11.setLeft(node21);
-        node11.setRight(node22);
+        node11.left = node21;
+        node11.right = node22;
 
         Solution s = new Solution();
         System.out.println(s.maxLevelSum(node1));
