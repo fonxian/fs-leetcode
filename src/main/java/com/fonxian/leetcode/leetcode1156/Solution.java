@@ -20,7 +20,6 @@ public class Solution {
     public int maxRepOpt1(String text) {
 
         int res = 0;
-        int[] indexArray = new int[26];
         charArray = text.toCharArray();
         len = charArray.length;
         //覆盖第一种情况
