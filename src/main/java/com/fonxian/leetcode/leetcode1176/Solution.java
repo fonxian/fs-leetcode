@@ -1,7 +1,8 @@
-package com.fonxian.leetcode.leetcode5174;
+package com.fonxian.leetcode.leetcode1176;
 
 /**
- * https://leetcode-cn.com/contest/weekly-contest-152/problems/diet-plan-performance/
+ * 1176. 健身计划评估
+ * https://leetcode-cn.com/problems/diet-plan-performance/
  *
  * @author Michael Fang
  * @since 2019-09-01

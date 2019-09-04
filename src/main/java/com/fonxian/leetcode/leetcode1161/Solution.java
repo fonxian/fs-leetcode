@@ -1,4 +1,4 @@
-package com.fonxian.leetcode.leetcode5052;
+package com.fonxian.leetcode.leetcode1161;
 
 import com.fonxian.leetcode.base.TreeNode;
 
@@ -6,6 +6,8 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
+ *1161. 最大层内元素和
+ * https://leetcode-cn.com/problems/maximum-level-sum-of-a-binary-tree/
  * @author Michael Fang
  * @since 2019-08-18
  */

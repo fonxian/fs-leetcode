@@ -1,11 +1,14 @@
-package com.fonxian.leetcode.leetcode5053;
+package com.fonxian.leetcode.leetcode1162;
 
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * href = https://leetcode-cn.com/contest/weekly-contest-150/problems/as-far-from-land-as-possible/
+ *
+ * 1162. 地图分析
+ *
+ * https://leetcode-cn.com/contest/weekly-contest-150/problems/as-far-from-land-as-possible/
  *
  * @author Michael Fang
  * @since 2019-08-18
