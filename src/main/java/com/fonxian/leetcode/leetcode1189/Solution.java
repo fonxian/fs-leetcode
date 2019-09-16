@@ -1,4 +1,4 @@
-package com.fonxian.leetcode.leetcode5189;
+package com.fonxian.leetcode.leetcode1189;
 
 /**
  *
@@ -11,11 +11,6 @@ package com.fonxian.leetcode.leetcode5189;
 public class Solution {
 
     public int maxNumberOfBalloons(String text) {
-        //0 a
-        //1 b
-        //2 l  2
-        //3 o  2
-        //4 n
         int[] arr = new int[5];
         char[] charArray = text.toCharArray();
         for(char ch:charArray){
