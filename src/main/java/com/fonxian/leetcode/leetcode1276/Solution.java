@@ -1,9 +1,12 @@
-package com.fonxian.leetcode.leetcode5276;
+package com.fonxian.leetcode.leetcode1276;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *
+ * https://leetcode-cn.com/problems/number-of-burgers-with-no-waste-of-ingredients/
+ *
  * @author Michael Fang
  * @since 2019-12-01
  */
@@ -11,14 +14,6 @@ public class Solution {
 
     public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {
         List<Integer> list = new ArrayList<>();
-        // 设巨 x个，小 y 个
-        // t =   4x + 2y
-        // c =  x + y
-
-        // y = c - x
-        // y = (t - 4x) / 2
-        // 2c - 2x = (t - 4x)
-        // x = (t - 2c)/2
         int x = (tomatoSlices - 2 * cheeseSlices) / 2;
         int y = cheeseSlices - x;
 

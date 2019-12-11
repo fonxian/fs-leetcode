@@ -1,6 +1,5 @@
-package com.fonxian.leetcode.leetcode5280;
+package com.fonxian.leetcode.leetcode1282;
 
-import com.alibaba.fastjson.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ *
+ * https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to/
+ *
  * @author Michael Fang
  * @since 2019-12-08
  */
@@ -41,8 +43,6 @@ public class Solution {
             }
 
         }
-//        System.out.println(JSONObject.toJSONString(res));
-//        System.out.println(JSONObject.toJSONString(map));
         return res;
     }
 

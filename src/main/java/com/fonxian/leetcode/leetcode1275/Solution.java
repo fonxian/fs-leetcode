@@ -1,4 +1,4 @@
-package com.fonxian.leetcode.leetcode5275;
+package com.fonxian.leetcode.leetcode1275;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,6 +7,7 @@ import java.util.Set;
  *
  * AC
  *
+ * https://leetcode-cn.com/problems/find-winner-on-a-tic-tac-toe-game/
  *
  * @author Michael Fang
  * @since 2019-12-01
