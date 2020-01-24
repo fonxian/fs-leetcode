@@ -1,4 +1,4 @@
-package com.fonxian.leetcode.leetcode12;
+package com.fonxian.leetcode.leetcode012;
 
 /**
  * @author Michael Fang
