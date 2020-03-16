@@ -45,9 +45,14 @@ public class Solution {
 
     public static void main(String[] args) {
 //        int[] nums = {2, 3};
-        int[] nums = {1, 2, 3, 6, 7};
+//        int[] nums = {1, 2, 3, 6, 7};
 //        int[] nums = {1, 4};
-        System.out.println(Arrays.toString(missingTwo(nums)));
+//        System.out.println(Arrays.toString(missingTwo(nums)));
+
+        int[] nums = {8, 2, 3, 6, 7};
+        Arrays.sort(nums);
+        int[] test = Arrays.copyOf(nums,2);
+        System.out.println(Arrays.toString(test));
     }
 
 }
