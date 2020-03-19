@@ -10,20 +10,15 @@ public class com.fonxian.base.jvm.TestStack {
 
   public int math();
     Code:
-       // 将int类型常量1压入栈
        0: iconst_1
-       // istore 将int类型值存入局部变量
        1: istore_1
        2: iconst_2
        3: istore_2
-       // iload_1 从局部变量1中装载int类型值
        4: iload_1
        5: iload_2
-       // iadd 执行int类型的加法
        6: iadd
        7: istore_3
        8: iload_3
-       // ireturn 从方法中返回int类型的数据
        9: ireturn
     LineNumberTable:
       line 10: 0
@@ -33,11 +28,8 @@ public class com.fonxian.base.jvm.TestStack {
 
   public static void main(java.lang.String[]);
     Code:
-       // new 创建一个新对象
        0: new           #2                  // class com/fonxian/base/jvm/TestStack
-       // 复制栈顶部一个字长内容
        3: dup
-       // invokespecial 根据编译时类型来调用实例方法
        4: invokespecial #3                  // Method "<init>":()V
        7: astore_1
        8: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;

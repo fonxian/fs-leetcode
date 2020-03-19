@@ -20,6 +20,7 @@ package com.fonxian.interview.interview0801;
 
  n范围在[1, 1000000]之间
 
+ status:AC
 
 
  * @author Michael Fang
