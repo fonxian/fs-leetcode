@@ -1,4 +1,4 @@
-package com.fonxian.leetcode.leetcode50;
+package com.fonxian.swordoffer.offer50;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
