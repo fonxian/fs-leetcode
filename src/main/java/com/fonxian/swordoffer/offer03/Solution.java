@@ -1,5 +1,7 @@
 package com.fonxian.swordoffer.offer03;
 
+import java.util.Arrays;
+
 /**
  *
  * 面试题03. 数组中重复的数字
@@ -15,13 +17,17 @@ package com.fonxian.swordoffer.offer03;
  *
  * status:AC
  *
- * 面试题04. 二维数组中的查找
  *
  * @author Michael Fang
  * @since 2020-03-16
  */
 public class Solution {
 
+    /**
+     * 解法一：开辟新的数组空间
+     * @param nums
+     * @return
+     */
     public int findRepeatNumber(int[] nums) {
         int len = nums.length;
         if(len == 1){
@@ -37,6 +43,62 @@ public class Solution {
         }
         return 0;
     }
+
+    /**
+     * 解法二：排序
+     * @param nums
+     * @return
+     */
+    public int findRepeatNumber2(int[] nums) {
+        int len = nums.length;
+        if(len == 1){
+            return -1;
+        }
+        Arrays.sort(nums);
+        for(int i = 0;i<len;i++){
+            if(i-1>0 && nums[i] == nums[i-1]){
+                return nums[i];
+            }
+            if(i+1<len && nums[i] == nums[i+1]){
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 解法三：时间和空间复杂度最优 O(n)、O(1)
+     * @param nums
+     * @return
+     */
+    public int findRepeatNumber3(int[] nums) {
+        int len = nums.length;
+        if(len == 0){
+            return -1;
+        }
+        // 2 3 1 0 2
+        // 1 3 2 0 2
+        // 3 1 2 0 2
+        // 0 1 2 3 2 (nums[i] == i)
+        // 0 1 2 3 2(cur)  (nums[i] == nums[nums[i]])
+        for(int i = 0;i<len;i++){
+            while(nums[i] != i){
+                if(nums[i] == nums[nums[i]]){
+                    return nums[i];
+                }
+                swap(nums,i,nums[i]);
+            }
+        }
+        return -1;
+    }
+
+    private void swap(int[] nums,int i,int num){
+        int t = nums[num];
+        nums[num] = nums[i];
+        nums[i] = nums[num];
+    }
+
+
 
     public static void main(String[] args) {
 
