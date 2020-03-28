@@ -1,5 +1,7 @@
 package com.fonxian.interview.interview09;
 
+import java.util.Stack;
+
 /**
  * 面试题09. 用两个栈实现队列
  *
@@ -10,20 +12,29 @@ package com.fonxian.interview.interview09;
  */
 public class CQueue {
 
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
+
     public CQueue() {
-        // 1 2 3 4
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
 
     public void appendTail(int value) {
-
+        stack1.push(value);
     }
 
     public int deleteHead() {
-        return -1;
-    }
-
-    public static void main(String[] args) {
-
+        if(!stack2.empty()){
+            return stack2.pop();
+        }
+        while(stack1.size() != 0){
+            stack2.push(stack1.pop());
+        }
+        if(stack2.empty()){
+            return -1;
+        }
+        return stack2.pop();
     }
 
 }

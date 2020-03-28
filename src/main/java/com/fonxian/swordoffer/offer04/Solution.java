@@ -10,6 +10,17 @@ package com.fonxian.swordoffer.offer04;
 
  给定 target = 20，返回 false。
 
+
+ Consider the following matrix:
+ [
+ [1,   4,  7, 11, 15],
+ [2,   5,  8, 12, 19],
+ [3,   6,  9, 16, 22],
+ [10, 13, 14, 17, 24],
+ [18, 21, 23, 26, 30]
+ ]
+
+
  *
  * status:AC
  *
@@ -17,6 +28,13 @@ package com.fonxian.swordoffer.offer04;
  * @since 2020-03-16
  */
 class Solution {
+
+    /**
+     * 解法一：全局遍历
+     * @param matrix
+     * @param target
+     * @return
+     */
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
         int row = matrix.length;
         if(row == 0){
@@ -32,4 +50,23 @@ class Solution {
         }
         return false;
     }
+
+    /**
+     * 解法二：
+     *
+     * TODO
+     *
+     * 如果要找26最优的路线：1 -> 15 -> 30 -> 26
+     * 如果要找23最优的路线：1 -> 15 ->
+     * @param matrix
+     * @param target
+     * @return
+     */
+    public boolean findNumberIn2DArray2(int[][] matrix, int target) {
+
+        return false;
+    }
+
+
+
 }
