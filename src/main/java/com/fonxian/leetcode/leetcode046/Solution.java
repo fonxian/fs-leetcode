@@ -35,10 +35,14 @@ public class Solution {
             return res;
         }
 
+        // 状态变量
         boolean[] used = new boolean[len];
+
         List<Integer> path = new ArrayList<>();
 
         // 为什么要用递归？
+        // 在已经选择了一部分数的前提下，继续去选择未选择的数
+        // 后面的操作依赖之前的操作，所以要使用递归
         dfs(nums, len, 0, path, used, res);
         return res;
     }
@@ -49,10 +53,11 @@ public class Solution {
 
         // 终止条件：数选够了，也就是达到了最大深度
         if (depth == len) {
-            res.add(path);
+            res.add(new ArrayList<>(path));
             return;
         }
 
+        // 这段代码如何理解？
         for (int i = 0; i < len; i++) {
             if (!used[i]) {
                 path.add(nums[i]);
@@ -60,6 +65,8 @@ public class Solution {
 
                 dfs(nums, len, depth + 1, path, used, res);
                 // 注意：这里是状态重置，是从深层结点回到浅层结点的过程，代码在形式上和递归之前是对称的
+
+                // 进行回溯操作
                 used[i] = false;
                 path.remove(path.size() - 1);
             }
